@@ -1,0 +1,17 @@
+{
+  "name": "tp-link-hs110-munisense-connector",
+  "version": "0.1.0",
+  "description": "Simple program for storing HS110 sensor values in the Munisense backoffice",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine-node spec"
+  },
+  "author": "Jeroen Maas",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "hs100-api": "^0.3.0",
+    "jasmine-node": "^1.14.5",
+    "sync-disk-cache": "^1.2.2",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
