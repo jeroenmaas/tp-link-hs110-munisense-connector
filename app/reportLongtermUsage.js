@@ -19,7 +19,7 @@ function reportLongtermUsage(usageInKWH, uniqueIdentifier) {
     lastValue = usageInKWH;
 
     cache.set("" + uniqueIdentifier, JSON.stringify({baseValue: baseValue, lastValue: lastValue}));
-    return Math.round((baseValue + lastValue) * 100) / 100;
+    return Math.round((baseValue + lastValue) * 1000) / 1000;
 }
 
 exports.reportLongtermUsage = reportLongtermUsage;

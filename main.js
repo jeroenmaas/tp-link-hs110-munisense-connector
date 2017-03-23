@@ -55,6 +55,6 @@ setInterval(function() {
     plug.getConsumption().then(function(results) {
         var totalKWHToday = results.get_realtime.total;
         var result = reportLongtermUsage(totalKWHToday, Config.local.device_ip);
-        JOA.addZCLReport(Config.munisense.node_eui64, null, null, "0x9404", "0x0000", "0x21", Date.now(), "" + Math.round(result));
+        JOA.addZCLReport(Config.munisense.node_eui64, null, null, "0x9404", "0x0001", "0x21", Date.now(), "" + Math.round(result*1000));
     });
 }, Config.reporting.total_usage_measurement_interval_ms);
