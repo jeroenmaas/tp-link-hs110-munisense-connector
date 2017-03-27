@@ -5,16 +5,17 @@ var Config = {
         gateway_ip: ""
     },
     local: {
-        devices: {
-            "boiler": {
-                ip: "",
-                eui64: ""
+        devices: [
+            {
+                name: "optional, for example TV",
+                ip: "123.123.123.123",
+                eui64: "0000:0000:0000:0000"
             },
-            "tv": {
+            {
                 ip: "",
                 eui64: ""
             }
-        }
+        ]
     },
     reporting: {
         usage_measurement_interval_in_ms: 1000,
