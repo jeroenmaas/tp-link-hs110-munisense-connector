@@ -78,3 +78,14 @@ setInterval(function () {
         })(eui64);
     }
 }, Config.reporting.total_usage_measurement_interval_ms);
+
+if(Config.debug.memory_dump.enabled) {
+    var heapdump = require('heapdump');
+
+    setInterval(function () {
+        var loc = Config.debug.memory_dump.location();
+        console.log("Writing snapshot to "  + loc);
+        heapdump.writeSnapshot(loc);
+    }, Config.debug.memory_dump.interval_in_ms);
+}
+
